@@ -9,12 +9,13 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <!-- Welcome, how many players, names and colors, rules, button to play -->
-    <Grid>
+    <Grid Background="#FFDFEAC3">
+
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="100"/>
             <RowDefinition Height="auto"/>
             <RowDefinition/>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="120"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -28,7 +29,10 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             FontSize="50"
-            Text="Welcome"/>
+            FontFamily="Lobster"
+            Foreground="Olive"
+            Opacity="0.5"
+            Text=""/>
 
         <!-- Second row, first column -->
         <StackPanel
@@ -36,33 +40,72 @@
                 Grid.Row="1"
                 Grid.Column="0">
             <TextBlock 
-                Text="Choose number of players"
-                FontSize="20"/>
-            <ComboBox>
+                Text="CHOOSE NUMBER OF PLAYERS"
+                FontSize="20"
+                FontFamily="Consolas"
+                Foreground="#FF147E13"
+                TextDecorations="Underline" FocusVisualSecondaryBrush="#FF147E13" FontWeight="Bold"/>
+            <ComboBox 
+                HorizontalAlignment="Left" 
+                Margin="10,0,0,0"
+                Height="30" 
+                VerticalAlignment="Top" 
+                Width="226"
+                Background="Transparent">
                 <ComboBoxItem Content="2"/>
                 <ComboBoxItem Content="3"/>
                 <ComboBoxItem Content="4"/>
             </ComboBox>
         </StackPanel>
-        
+
         <!-- Third row, first clumn -->
         <StackPanel Orientation="Vertical"
                 Grid.Row="2"
-                Grid.Column="0">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="RÖD"/>
+                Grid.Column="0"
+                VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal" Height="55">
+                <TextBlock 
+                    Text="RED"
+                    FontSize="30"
+                    Foreground="Red"
+                    />
                 <TextBox 
-                    PlaceholderText="NAMn"/>
+                    PlaceholderText="LOVE"
+                    Width="150"
+                    Height="30"
+                    Margin="101,0,0,15"
+                    FontSize="20"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    />
             </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Grön"/>
+            <StackPanel Orientation="Horizontal" Height="55">
+                <TextBlock 
+                    Text="GREEN"
+                    Foreground="Green"
+                    FontSize="30"/>
                 <TextBox 
-                    PlaceholderText="NAMn"/>
+                    PlaceholderText="ESTER"
+                    FontSize="20"
+                    Width="150"
+                    Height="30"
+                    Margin="65,0,0,15"
+                    Background="Transparent"
+                    BorderThickness="0"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Blå"/>
+            <StackPanel Orientation="Horizontal" Height="55">
+                <TextBlock 
+                    Text="BLUE"
+                    Foreground="Blue"
+                    FontSize="30"/>
                 <TextBox 
-                    PlaceholderText="NAMn"/>
+                    PlaceholderText="LENA"
+                    FontSize="20"
+                    Width="150"
+                    Height="30"
+                    Margin="90,0,0,15"
+                    Background="Transparent"
+                    BorderThickness="0"/>
             </StackPanel>
         </StackPanel>
 
@@ -71,28 +114,56 @@
             Grid.Row="1"
             Grid.Column="1"
             HorizontalAlignment="Center"
-            Text="Rules"
-            FontSize="30"/>
+            Text="RULES"
+            FontSize="20"
+            FontFamily="Consolas"
+            TextDecorations="Underline"
+            Foreground="#FF147E13" Height="24" Margin="0,0.333,0,0" Grid.RowSpan="2" VerticalAlignment="Top" FontWeight="Bold"
+            >
+            <TextBlock.FocusVisualSecondaryBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF147E13" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.FocusVisualSecondaryBrush>
+        </TextBlock>
         <!-- Third row, second column -->
-        <TextBlock 
+        <Border 
+            BorderBrush="LightGray" 
+            BorderThickness="2" 
+            Grid.Row="2" 
+            Grid.Column="1"
+            Height="210px" 
+            Width="510">
+            <TextBlock 
             Grid.Row="2"
             Grid.Column="1"
+            Width="500"
+            Height="200"
             TextWrapping="Wrap"
             HorizontalAlignment="Center"
-            Text="Text about game WHICH IS LONGER THAN THIS TO TEST the textwrapping of the block"
-            FontSize="28"/>
-        
+            FontFamily="Consolas"
+            Foreground="Olive"
+            Opacity="0.8"
+            FontSize="10"><Run Text="-Number of players must be between 2-4.&#x0a;&#x0a;-You roll the dice and take steps according to the number given on the dice.&#x0a;&#x0a;-Every color on the board represents a category. If you get the correct answer in a category you have collected a star of that color. If your answer is wrong you get a new chance to collect the star next time you are at the same category.&#x0a;&#x0a;-If you hit 6 on the dice you may play once again, othervise its the next players turn.&#x0a;&#x0a;-The main goal is to collect a star in every possible category/color. The first one to collect all the stars win.&#x0a;&#x0a;&#x0a;                                     GOOD LUCK!"/></TextBlock>
+
+        </Border>
         <!-- Fourth row -->
         <Button 
-            Content="Lets play" 
+            Content="LETS PLAY" 
             Grid.Row="3" 
             Grid.ColumnSpan="2" 
             HorizontalAlignment="Center" 
             VerticalAlignment="Center"
-            FontSize="50"
+            FontSize="24"
+            Height="51"
+            Width="250"
+            Foreground="#FF69946A"
+            Opacity="0.8" FocusVisualPrimaryBrush="#00000000" Background="#335DA94B" FocusVisualSecondaryBrush="#99265C1F" BorderBrush="#FF266C37" FontWeight="Bold" FontFamily="Candara" Visibility="Visible"
             
             />
 
 
     </Grid>
+
 </Page>
