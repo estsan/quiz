@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="QuizProject.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:QuizProject"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel>
+            <TextBlock Text="QUIZKAMPEN"
+                       FontSize="80"
+                       HorizontalAlignment="Center"/>
+        </StackPanel>
+
+        <Frame x:Name="ContentFrame" Grid.Row="1"/>
+
+        <!-- Logga gemensamt för alla sidor. Mer här som vi kommer på -->
+    </Grid>
+</Page>
