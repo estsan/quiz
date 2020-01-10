@@ -26,10 +26,5 @@ namespace QuizProject
         {
             this.InitializeComponent();
         }
-
-        private void Button_ContextCanceled(UIElement sender, RoutedEventArgs args)
-        {
-
-        }
     }
 }

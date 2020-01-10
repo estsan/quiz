@@ -9,13 +9,14 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <!-- Here is where the game board is -->
-    <Grid>
+    <Grid Background="#FFDFEAC3">
 
 
         <NavigationView x:Name="NavView"
                         IsBackButtonVisible="Collapsed"
                         IsSettingsVisible="false"
-                        IsPaneOpen="false">
+                        IsPaneOpen="false"
+                        Background="#FFDFEAC3">
 
             <NavigationView.MenuItems>
                 <NavigationViewItem Icon="Contact" 
@@ -117,13 +118,13 @@
                 <Rectangle Grid.Row="5" Grid.Column="7" Stroke="Red" StrokeThickness="10"/>
                 <Rectangle Grid.Row="6" Grid.Column="1" Stroke="Blue" StrokeThickness="10"/>
                 <Rectangle Grid.Row="6" Grid.Column="7" Stroke="Purple" StrokeThickness="10"/>
-                <Rectangle Grid.Row="7" Grid.Column="1" Stroke="Green" StrokeThickness="10"/>
+                <Rectangle Grid.Row="7" Grid.Column="1" Stroke="Green" StrokeThickness="10" Height="112" VerticalAlignment="Top"/>
                 <Rectangle Grid.Row="7" Grid.Column="2" Stroke="Purple" StrokeThickness="10"/>
                 <Rectangle Grid.Row="7" Grid.Column="3" Stroke="Red" StrokeThickness="10"/>
                 <Rectangle Grid.Row="7" Grid.Column="4" Stroke="DarkGoldenrod" StrokeThickness="10"/>
                 <Rectangle Grid.Row="7" Grid.Column="5" Stroke="DeepPink" StrokeThickness="10"/>
                 <Rectangle Grid.Row="7" Grid.Column="6" Stroke="Blue" StrokeThickness="10"/>
-                <Rectangle Grid.Row="7" Grid.Column="7" Stroke="Green" StrokeThickness="10"/>
+                <Rectangle Grid.Row="7" Grid.Column="7" Stroke="Green" StrokeThickness="10" Height="112" VerticalAlignment="Top"/>
 
                 <!-- Is supposed to Be a die, and animate when button is clicked -->
                 <FontIcon 
@@ -170,7 +171,7 @@
                     FontSize="40"
                     FontFamily="{StaticResource SymbolThemeFontFamily}" 
                     Glyph="&#xE77B;" 
-                    Foreground="Black"/>
+                    Foreground="Black" Height="112" VerticalAlignment="Top"/>
 
                 <ComboBox Grid.Row="0"
                           Grid.Column="2" 
